@@ -1,0 +1,242 @@
+{
+  "finished": "2026-10-25T09:06:46.858076+00:00",
+  "seeds": [
+    {
+      "name": "exam_schedule",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0OGU5ZDA3NWUzMw_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6348ea525addc_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 17261,
+      "tables": 0,
+      "pdf_links": 81
+    },
+    {
+      "name": "exam_details",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0OGU5ZDA3NWUzMw_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6423e52f2a65d_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 14173,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "academic_calendar",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2IwMDY0M2I0MQ_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 13022,
+      "tables": 0,
+      "pdf_links": 35
+    },
+    {
+      "name": "programs_diploma",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6347de510181f_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12956,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "programs_undergraduate",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6347ded53315c_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 13674,
+      "tables": 2,
+      "pdf_links": 7
+    },
+    {
+      "name": "programs_postgraduate",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6347df1dab97f_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 13355,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "programs_phd",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6364e67f1513a_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12903,
+      "tables": 0,
+      "pdf_links": 13
+    },
+    {
+      "name": "programs_management",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6666e8bbded61_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12863,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "programs_working_prof",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6666e8bbded61_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "duplicate",
+      "duplicate_of": "programs_management"
+    },
+    {
+      "name": "programs_computer_app",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2FmN2JlNGVhYg_nZzaXNkY2JxdXNhNDZlM2Q3Nz_675c1eb4a3f0f_12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12789,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "rules_regulations",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjQ5MmEzOWNkZmQ3OA_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12656,
+      "tables": 0,
+      "pdf_links": 10
+    },
+    {
+      "name": "curriculum",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjUwZDFiOWZmMWEzNg_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 12973,
+      "tables": 0,
+      "pdf_links": 7
+    },
+    {
+      "name": "courses_po_pso_co",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjM0M2IwNGZkOWYyZg_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNDE0ZDAzYw",
+      "status": "ok",
+      "type": "html",
+      "chars": 13615,
+      "tables": 0,
+      "pdf_links": 31
+    },
+    {
+      "name": "fee_structure",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjNjNTE3YTFkYjI3Nw_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 22174,
+      "tables": 8,
+      "pdf_links": 25
+    },
+    {
+      "name": "admission_enquiry",
+      "url": "https://ritindia.edu/ritwebsite/website/admission.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDAwMWYwNWFhZg_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 16432,
+      "tables": 9,
+      "pdf_links": 7
+    },
+    {
+      "name": "admission_faqs",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDQ4YjAwMTk0Zg_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 16012,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "admission_ug_fy",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MGQ4MTJmMA_nZzaXNkY2JxdXNhNDZlM2Q3Nz_632452dadab82_1_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 13591,
+      "tables": 0,
+      "pdf_links": 12
+    },
+    {
+      "name": "admission_ug_dsy",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MGQ4MTJmMA_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6324530e2c85b_2_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 12537,
+      "tables": 0,
+      "pdf_links": 12
+    },
+    {
+      "name": "admission_pg_fy",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MGQ4MTJmMA_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6324530e2c85b_2_NjMyMTgwNmVjNTRjNg",
+      "status": "duplicate",
+      "duplicate_of": "admission_ug_dsy"
+    },
+    {
+      "name": "admission_pg_rules",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MTQ2MWQ0NQ_nZzaXNkY2JxdXNhNDZlM2Q3Nz_63c514cc18353_12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 14782,
+      "tables": 1,
+      "pdf_links": 7
+    },
+    {
+      "name": "admission_diploma_fy",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MjI0NjEwZQ_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6329b6a239675_3_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 13463,
+      "tables": 0,
+      "pdf_links": 12
+    },
+    {
+      "name": "admission_diploma_dsy",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDE2MjI0NjEwZQ_nZzaXNkY2JxdXNhNDZlM2Q3Nz_6329b6b716a6a_4_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 13431,
+      "tables": 0,
+      "pdf_links": 11
+    },
+    {
+      "name": "admission_mba",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDQxODBjNWQwYw_nZzaXNkY2JxdXNhNDZlM2Q3Nz_69e3166b0a473_12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 15758,
+      "tables": 0,
+      "pdf_links": 10
+    },
+    {
+      "name": "admission_bba",
+      "url": "https://ritindia.edu/ritwebsite/website/undergraduate.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyNDQxODBjNWQwYw_nZzaXNkY2JxdXNhNDZlM2Q3Nz_69e31673152a8_7_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 13176,
+      "tables": 0,
+      "pdf_links": 10
+    },
+    {
+      "name": "leadership_1",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyMmIxMGY3OTVmZg_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTY3N2YyNWY3Yw",
+      "status": "ok",
+      "type": "html",
+      "chars": 18183,
+      "tables": 0,
+      "pdf_links": 8
+    },
+    {
+      "name": "leadership_2",
+      "url": "https://ritindia.edu/ritwebsite/website/aboutus.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjMyMTkwYzkyMGU2MQ_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTY3N2YyNWY3Yw",
+      "status": "ok",
+      "type": "html",
+      "chars": 19954,
+      "tables": 0,
+      "pdf_links": 7
+    },
+    {
+      "name": "fees_page",
+      "url": "https://ritindia.edu/ritwebsite/website/feestructure.php?idsfvsisdcbqusa=aWRzZnZzaXNkY2JxdXNhNDZlM2Q3NzJhMTg4OGVhZGZmMjZjN2FkYTQ3ZmQ3NTAyZDc5NmUwN_MNjkzNjViNzJhOTIwYw_nZzaXNkY2JxdXNhNDZlM2Q3Nz__12_NjMyMTgwNmVjNTRjNg",
+      "status": "ok",
+      "type": "html",
+      "chars": 11949,
+      "tables": 0,
+      "pdf_links": 7
+    }
+  ]
+}

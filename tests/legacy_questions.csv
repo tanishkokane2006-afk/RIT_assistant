@@ -1,0 +1,21 @@
+id,question,category,expected_source,expected_answer_summary
+Q01,Where is RIT located?,location,institute_info.json,Rajaramnagar Sakharale Walwa Sangli Maharashtra 415414
+Q02,What are the placements?,placements,departments_info.json,Department-wise highest package and recruiters table
+Q03,Which department has the most placements?,placements,departments_info.json,Department with most recruiters named
+Q04,placememnts at RIT,placements,departments_info.json,Typo test: same as placements question
+Q05,What is the RIT admission contact number?,contact,institute_info.json,Admission contact phone number from institute data
+Q06,What is the RIT admission email?,contact,institute_info.json,Admission email from institute data
+Q07,Admission enquiry,admission,admission_enquiry.json,Sanctioned intake capacity by programme
+Q08,What is the intake for CSE?,admission,programs_undergraduate.json,Sanctioned intake for Computer Science and Engineering
+Q09,What are the B.Tech fees?,fees,fee_structure.json,B.Tech tuition fee from fee structure
+Q10,Who is the HOD of Computer Science?,department,departments_info.json,Named HOD of CSE department
+Q11,Who is the exam coordinator for CSE?,exam,exam_details.json,Named exam coordinator with contact details
+Q12,Is there a hostel facility for boys?,facilities,institute_info.json,Hostel facility description for boys
+Q13,What is the highest package for CSE?,placements,departments_info.json,Highest package figure for CSE from data
+Q14,kuthe ahe RIT,location,institute_info.json,Marathi-style location question: location of RIT
+Q15,What is the fee for a Mars campus?,out_of_scope,none,Should abstain with not found message
+Q16,Who won the cricket world cup in 2011?,out_of_scope,none,Should abstain with not found message
+Q17,What is the weather in Pune today?,out_of_scope,none,Should abstain with not found message
+Q18,Who is the Prime Minister of India?,out_of_scope,none,Should abstain with not found message
+Q19,What is the price of a laptop at RIT?,out_of_scope,none,Should abstain with not found message
+Q20,Can you write me a Python program?,out_of_scope,none,Should abstain with not found message

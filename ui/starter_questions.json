@@ -1,0 +1,37 @@
+[
+  {
+    "group": "Admissions & Intake",
+    "questions": [
+      "What is the intake for Computer Engineering?",
+      "What is the intake for Electrical Engineering?",
+      "Intake of Civil Engineering"
+    ]
+  },
+  {
+    "group": "Cut-offs",
+    "questions": [
+      "What is the cut-off for Computer Engineering?",
+      "What is the MHT-CET cutoff for CSE AIML?",
+      "What is the cutoff for Civil Engineering?"
+    ]
+  },
+  {
+    "group": "Departments & HODs",
+    "questions": [
+      "Who is the HOD of Civil Engineering?",
+      "Who is the HOD of Computer Science and Engineering?",
+      "Who is the HOD of Mechanical Engineering?",
+      "Who is the HOD of Robotics and Automation?"
+    ]
+  },
+  {
+    "group": "Campus & Resources",
+    "questions": [
+      "Where is RIT located?",
+      "Is there a hostel for boys?",
+      "Where can I find the academic calendar?",
+      "Where can I download the exam schedule?",
+      "Who is the Director of RIT?"
+    ]
+  }
+]

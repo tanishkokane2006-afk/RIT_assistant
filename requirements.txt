@@ -1,0 +1,21 @@
+# Core API & Server
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# Scraping & Normalisation
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+pdfplumber>=0.11.0
+pypdf>=4.1.0
+
+# Vector Embeddings & Indexing (MiniLM 384-d)
+sentence-transformers>=2.5.0
+faiss-cpu>=1.8.0
+numpy>=1.26.0
+
+# Testing
+pytest>=8.1.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0

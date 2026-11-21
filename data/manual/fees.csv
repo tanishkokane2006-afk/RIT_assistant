@@ -1,0 +1,11 @@
+﻿Program,Annual Tuition Fee (INR),Fee Details,context,source,Category
+B.Tech,136522,"For First Year B.Tech, the official approved Tuition Fee is Rs. 1,36,522 per year for Open Category students. Category fee concessions (OBC, EBC, SC, ST, NT, TFWS) apply as per Maharashtra Government and FRA regulations.",Curated summary - academic year not stated in source,institute_info.json (curated),
+B.Tech,,"Rs. 1,36,522 per year (100% Tuition Fee)",Curated summary - academic year not stated in source,institute_info.json (curated),Open Category
+B.Tech,,"Rs. 68,261 per year (50% Tuition Fee concession via Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna)",Curated summary - academic year not stated in source,institute_info.json (curated),OBC EBC
+B.Tech,,Rs. 0 Tuition Fee (100% fee exemption under Government of Maharashtra MahaDBT scholarship),Curated summary - academic year not stated in source,institute_info.json (curated),SC ST
+B.Tech,,Rs. 0 Tuition Fee (100% Tuition Fee waiver under Tuition Fee Waiver Scheme / VJNT welfare),Curated summary - academic year not stated in source,institute_info.json (curated),VJNT SBC TFWS
+B.Tech,,"Full approved fee of Rs. 1,36,522 per year without government concession",Curated summary - academic year not stated in source,institute_info.json (curated),Institutional Management Quota
+MBA,83478,"For MBA program, the annual Tuition Fee is Rs. 83,478.",Curated summary - academic year not stated in source,institute_info.json (curated),
+MCA,40909,"For MCA program, the annual Tuition Fee is Rs. 40,909.",Curated summary - academic year not stated in source,institute_info.json (curated),
+BBA,36000,"For BBA program, the annual Tuition Fee is Rs. 36,000.",Curated summary - academic year not stated in source,institute_info.json (curated),
+DIPLOMA,41178,"For Diploma First Year engineering courses, the annual Tuition Fee is Rs. 41,178.",Curated summary - academic year not stated in source,institute_info.json (curated),

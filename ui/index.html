@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIT Assistant — Institutional Information</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Header -->
+    <header id="app-header">
+      <a href="/" class="header-brand" aria-label="RIT Assistant Home">
+        <img src="assets/logo.svg" alt="" class="header-logo" width="36" height="36">
+        <div class="header-title-wrap">
+          <span class="header-title assistant-name-text">RIT Assistant</span>
+          <span class="header-subtitle institute-name-text">Rajarambapu Institute of Technology</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <span id="quota-pill" class="quota-pill" data-quota="good" aria-live="polite">5 free questions left</span>
+        <button id="auth-btn" class="btn-text" type="button">Institute Login</button>
+        <button id="theme-btn" class="btn-icon" type="button" aria-label="Switch theme">☾</button>
+        <button id="info-btn" class="btn-icon" type="button" aria-label="How answers work">?</button>
+      </div>
+    </header>
+
+    <!-- Main Chat Window -->
+    <main id="chat-main">
+      <!-- Welcome Card (shown only when conversation is empty) -->
+      <section id="welcome-card" class="welcome-card">
+        <h1 class="welcome-greeting">Hi! Ask me about RIT</h1>
+        <p class="welcome-sub">Answers come strictly from official RIT documents, intake records, fee notices, and website pages.</p>
+        
+        <div id="chip-tabs" class="chip-tabs" role="tablist" aria-label="Question categories">
+          <!-- Populated dynamically via starter_questions.json -->
+        </div>
+
+        <div id="starter-chips" class="starter-chips-wrap" role="tabpanel" aria-label="Starter questions">
+          <!-- Populated dynamically -->
+        </div>
+      </section>
+
+      <!-- Message History Stream -->
+      <div id="chat-messages" role="log" aria-live="polite">
+        <!-- Messages appended dynamically -->
+      </div>
+    </main>
+
+    <!-- Query Input Area -->
+    <footer id="chat-input-area">
+      <form id="chat-form" class="input-form">
+        <div class="input-row">
+          <textarea
+            id="query-input"
+            class="query-textarea"
+            rows="1"
+            maxlength="500"
+            placeholder="Type your question… (Enter sends, Shift+Enter for newline, / to focus)"
+            aria-label="Ask a question about RIT"
+          ></textarea>
+          <button id="send-btn" class="btn-send" type="button" disabled>Send</button>
+        </div>
+
+        <div class="input-meta-row">
+          <nav class="footer-nav" aria-label="Assistant information and feedback">
+            <button id="feedback-link" class="footer-btn" type="button">Feedback</button>
+            <button id="suggest-link" class="footer-btn" type="button">Suggest a question</button>
+            <button id="how-link" class="footer-btn" type="button">How answers work</button>
+            <button id="privacy-link" class="footer-btn" type="button">Privacy</button>
+          </nav>
+          <div>
+            <button id="clear-chat-btn" class="btn-clear-chat" type="button">Clear chat</button>
+            <span id="char-counter" aria-hidden="true">0/500</span>
+          </div>
+        </div>
+      </form>
+    </footer>
+  </div>
+
+  <!-- Modal 1: Institute Login Dialog -->
+  <div id="login-dialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="login-title" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="login-title" class="modal-title">Institute Member Login</h2>
+        <button class="modal-close-btn" type="button" data-close-modal="login-dialog" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="login-form">
+        <div class="modal-body">
+          <p class="form-help">Institute members with a verified RIT access token have unlimited questions.</p>
+          <div class="form-group">
+            <label for="login-token-input" class="form-label">Access Token</label>
+            <input type="password" id="login-token-input" class="form-input" placeholder="Paste your institute token" required autocomplete="off">
+            <span id="login-error-msg" class="form-help text-danger sr-only"></span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-text" data-close-modal="login-dialog">Cancel</button>
+          <button type="submit" class="btn-send">Validate Token</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Limit Reached Dialog -->
+  <div id="limit-dialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="limit-title" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="limit-title" class="modal-title">Free Question Limit Reached</h2>
+        <button class="modal-close-btn" type="button" data-close-modal="limit-dialog" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>You have used your <strong>5 free questions</strong> for this session.</p>
+        <p class="form-help">RIT students, faculty, and staff can log in with their institute account for unlimited queries.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-text" data-close-modal="limit-dialog">Close</button>
+        <button id="limit-login-btn" type="button" class="btn-send">Institute Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Feedback & Suggest Dialog (Two Tabs) -->
+  <div id="feedback-dialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="fb-modal-title" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="fb-modal-title" class="modal-title">Feedback & Suggestions</h2>
+        <button class="modal-close-btn" type="button" data-close-modal="feedback-dialog" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="modal-tabs" role="tablist">
+        <button id="tab-btn-feedback" class="modal-tab-btn active" type="button" role="tab" aria-selected="true">Feedback</button>
+        <button id="tab-btn-suggest" class="modal-tab-btn" type="button" role="tab" aria-selected="false">Suggest a Question</button>
+      </div>
+
+      <!-- Tab 1: General Feedback -->
+      <form id="feedback-form">
+        <div id="tab-content-feedback" class="modal-body">
+          <input type="text" id="fb-hp" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-group">
+            <label class="form-label">How was your experience?</label>
+            <div class="rating-group" role="radiogroup" aria-label="Experience rating from 1 to 5 stars">
+              <button type="button" class="rating-btn" data-rating="1" aria-label="1 star">★</button>
+              <button type="button" class="rating-btn" data-rating="2" aria-label="2 stars">★</button>
+              <button type="button" class="rating-btn" data-rating="3" aria-label="3 stars">★</button>
+              <button type="button" class="rating-btn" data-rating="4" aria-label="4 stars">★</button>
+              <button type="button" class="rating-btn" data-rating="5" aria-label="5 stars">★</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="feedback-category" class="form-label">Category</label>
+            <select id="feedback-category" class="form-select">
+              <option value="General">General</option>
+              <option value="Wrong answer">Wrong answer</option>
+              <option value="Missing information">Missing information</option>
+              <option value="Hard to use">Hard to use</option>
+              <option value="Compliment">Compliment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="feedback-text" class="form-label">Your Message (optional)</label>
+            <textarea id="feedback-text" class="form-textarea" maxlength="1000" placeholder="Tell us how we can improve…"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="feedback-email" class="form-label">Contact Email (optional)</label>
+            <input type="email" id="feedback-email" class="form-input" maxlength="120" placeholder="your.email@example.com">
+            <span class="form-help">Only used if you would like the team to follow up with you.</span>
+          </div>
+          <span id="feedback-status-msg" class="sr-only" role="status"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-text" data-close-modal="feedback-dialog">Cancel</button>
+          <button type="submit" class="btn-send">Submit Feedback</button>
+        </div>
+      </form>
+
+      <!-- Tab 2: Suggest a Question -->
+      <form id="suggest-form">
+        <div id="tab-content-suggest" class="modal-body sr-only">
+          <input type="text" id="sg-hp" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-group">
+            <label for="suggest-question" class="form-label">Question to add <span aria-hidden="true">*</span></label>
+            <input type="text" id="suggest-question" class="form-input" maxlength="300" placeholder="e.g. What are the bus routes for RIT?" required>
+          </div>
+          <div class="form-group">
+            <label for="suggest-category" class="form-label">Category</label>
+            <select id="suggest-category" class="form-select">
+              <option value="Admissions">Admissions</option>
+              <option value="Fees">Fees</option>
+              <option value="Departments">Departments</option>
+              <option value="Campus">Campus & Facilities</option>
+              <option value="Exams">Exams & Academics</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="suggest-details" class="form-label">Expected answer or document link (optional)</label>
+            <textarea id="suggest-details" class="form-textarea" maxlength="500" placeholder="Where would this information be found on the RIT website?"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="suggest-email" class="form-label">Contact Email (optional)</label>
+            <input type="email" id="suggest-email" class="form-input" maxlength="120" placeholder="your.email@example.com">
+            <span class="form-help">Used only if the IT team needs clarification.</span>
+          </div>
+          <span id="suggest-status-msg" class="sr-only" role="status"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-text" data-close-modal="feedback-dialog">Cancel</button>
+          <button type="submit" class="btn-send">Submit Suggestion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: How Answers Work Sheet -->
+  <div id="info-dialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="info-title" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="info-title" class="modal-title">How Answers Work</h2>
+        <button class="modal-close-btn" type="button" data-close-modal="info-dialog" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul class="form-help">
+          <li><strong>Official Sources Only:</strong> Answers are retrieved strictly from indexed RIT website pages, verified PDFs, syllabus documents, and institutional disclosures.</li>
+          <li><strong>No Guessing or Hallucination:</strong> Structured tables (fees, cut-offs, intake) are returned verbatim. If data does not exist in the official records, the assistant answers that it cannot be found.</li>
+          <li><strong>English Retrieval:</strong> The underlying semantic index is in English. Please ask questions in English for optimal accuracy.</li>
+          <li><strong>Guest Access:</strong> Guest visitors receive 5 free questions. Institute users can log in with a signed token for unlimited queries.</li>
+          <li><strong>Data Snapshot:</strong> <span id="info-data-updated">2024-25 / 2025-26 Verified RIT Data</span>. Information may change over time; please verify urgent notices on <a href="https://ritindia.edu" target="_blank" rel="noopener noreferrer">ritindia.edu</a>.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-send" data-close-modal="info-dialog">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Privacy Sheet -->
+  <div id="privacy-dialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="privacy-title" class="modal-title">Privacy Policy</h2>
+        <button class="modal-close-btn" type="button" data-close-modal="privacy-dialog" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul class="form-help">
+          <li><strong>Zero Tracking:</strong> We do not track your IP address, browser fingerprint, or real name.</li>
+          <li><strong>Session-Only Chat History:</strong> Your conversation history is stored strictly in your browser's temporary <code>sessionStorage</code> and is completely destroyed when you close the tab.</li>
+          <li><strong>No Token Storage on Server:</strong> Your login token is held only in your browser session for the duration of your tab.</li>
+          <li><strong>Feedback Data:</strong> Feedback and suggested questions are stored in a standalone database for the RIT IT team to review. Your email is only stored if you explicitly provide it for follow-ups.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-send" data-close-modal="privacy-dialog">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

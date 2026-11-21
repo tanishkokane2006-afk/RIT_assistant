@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RIT Assistant — IT Administration Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Header -->
+    <header id="app-header">
+      <a href="/admin" class="header-brand">
+        <img src="assets/logo.svg" alt="" class="header-logo" width="36" height="36">
+        <div class="header-title-wrap">
+          <span class="header-title">RIT Assistant — IT Admin</span>
+          <span class="header-subtitle">Feedback & Knowledge Gap Dashboard</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="/" class="btn-text text-no-decor">View Assistant</a>
+        <button id="theme-btn" class="btn-icon" type="button" aria-label="Switch theme">☾</button>
+        <button id="logout-admin-btn" class="btn-text hidden" type="button">Lock Dashboard</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="chat-main">
+      <!-- Admin Key Gate Screen (Shown if not unlocked) -->
+      <section id="admin-auth-gate" class="welcome-card">
+        <h1 class="welcome-greeting">IT Team Authentication</h1>
+        <p class="welcome-sub">Enter the administrator key configured in <code>RIT_ADMIN_KEY</code> to access submissions and analytics.</p>
+        <form id="admin-auth-form" class="input-form">
+          <div class="form-group">
+            <label for="admin-key-input" class="form-label">Administrator Key</label>
+            <input type="password" id="admin-key-input" class="form-input" placeholder="Enter key (minimum 16 characters)" required autocomplete="off">
+            <span id="admin-auth-error" class="form-help text-danger sr-only"></span>
+          </div>
+          <button type="submit" class="btn-send">Unlock Dashboard</button>
+        </form>
+      </section>
+
+      <!-- Dashboard Container (Hidden until unlocked) -->
+      <div id="admin-dashboard-container" class="sr-only">
+        <!-- Metric Counters Row -->
+        <section class="welcome-card">
+          <h2 class="header-title mb-2">Submissions Overview</h2>
+          <div id="admin-metrics-row" class="starter-chips-wrap">
+            <!-- Dynamically populated metrics pills -->
+          </div>
+        </section>
+
+        <!-- Top Unanswered & Suggested Questions Panel -->
+        <section class="welcome-card">
+          <h2 class="header-title mb-1">Top Knowledge Base Priorities</h2>
+          <p class="welcome-sub mb-2">Grouped questions requested by users where official data is missing or suggested for addition.</p>
+          <div id="top-questions-container" class="top-questions-list">
+            <!-- Dynamically populated top questions list -->
+          </div>
+        </section>
+
+        <!-- Submissions Filter & Table Section -->
+        <section class="welcome-card">
+          <div class="admin-header-row">
+            <h2 class="header-title">User Submissions</h2>
+            <button id="export-csv-btn" class="btn-text" type="button">⬇ Export CSV (Excel Safe)</button>
+          </div>
+
+          <form id="admin-filter-form" class="admin-filter-bar">
+            <select id="filter-kind" class="form-select filter-kind-select">
+              <option value="">All Types</option>
+              <option value="unanswered">Unanswered Alert</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="answer_feedback">Answer Thumbs</option>
+              <option value="general_feedback">General Feedback</option>
+            </select>
+
+            <select id="filter-status" class="form-select filter-status-select">
+              <option value="">All Statuses</option>
+              <option value="new">New</option>
+              <option value="in_review">In Review</option>
+              <option value="done">Done</option>
+              <option value="declined">Declined</option>
+            </select>
+
+            <input type="text" id="filter-q" class="form-input filter-q-input" placeholder="Search text or email…">
+            <button type="submit" class="btn-send">Filter</button>
+            <button type="button" id="filter-reset-btn" class="btn-text">Reset</button>
+          </form>
+
+          <!-- Table Container -->
+          <div class="admin-table-wrap">
+            <table id="submissions-table" class="admin-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Summary</th>
+                  <th>User</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="submissions-tbody">
+                <!-- Dynamically populated rows -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div id="table-empty-msg" class="form-help text-center p-2 sr-only">No submissions match the selected filters.</div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
